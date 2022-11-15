@@ -1,40 +1,74 @@
-// user am taking a code quiz
-// 1. click the start button
-// 2.  a timer starts and I am presented with a question
-// 3.  I answer a question
-// 4.  I am presented with another question
-// 5.  I answer a question incorrectly
-// 6. time is subtracted from the clock
-// 7. all questions are answered or the timer reaches 0
-// 8. the game is over
-// 9. the game is over
-// 10. I can save my initials and my score
 
-// TODO
 var score = 0
 var highScore = 0 // persistent storage
-var intials = " " // form
-
+var initials = " " // form
 // timer
-var timer = document.getElementById('timer');
-// start the timer
 
-// function setTimer() {
-//     var timeInterval = setInterval(function()
-//     timer.textContent = 
-// })
+var timerCount= 60;
+var timerElement = document.querySelector(".timer");
+
+var startButton = document.querySelector(".start-quiz");
+
+// win + lose
+var win = document.querySelector(".win");
+var lose = document.querySelector(".lose")
+var winCounter = 0;
+var loseCounter = 0;
+var isWin = false;
+
+
+var questions = document.getElementById("questions");
+console.log(questions)
+
+init();
+
+startButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  timerCount = 10;
+  startTimer()
+});
+
+questions.addEventListener("click", function (event) {
+  event.preventDefault();
+  var a = event.target.value;
+  console.log(a)
+  if (a != null) {
+    validateQuestion(a);
+  }
+});
+// question objects
+var questions = document.querySelector(".questions")
+
+function startTimer() {
+    var timeInterval = setInterval(function(){
+    timerCount--;
+    timerCount.textContent = timerCount;
+    console.log(timerCount)
+    
+    if(timerCount === 0) {
+      // Stops execution of action at set interval
+      clearInterval(timeInterval);
+    }
+  }, 1000);
+}
 
 function init() {
 }
 
+function startQuiz() {
+    timerCount = 60;
+      // Prevents start button from being clicked when round is in progress
+    // startButton.disabled = true;
+    startTimer()
+}
+
+
 function allDone() {
-//     document.createElement("li");
-//     highScore.textContent = //
-// }
-event.preventDefault();
+     document.createElement("li");
+     highScore.textContent = highScore
+ }
 
 
-// TODO
 // question objects and answers
 var questionAnswers = [
     (q1 = {
@@ -85,6 +119,6 @@ var questionAnswers = [
         3 : "4. console.log()",
         a : "5. console.log()",
     })]
-}
 
-// TODO make the section with the questions and answers on a carosel
+//Attach event listener to start button to call startGame function on click
+startButton.addEventListener("click", startQuiz());
