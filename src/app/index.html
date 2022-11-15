@@ -7,28 +7,50 @@
     <link rel="stylesheet" href="./css/style.css" />
     <title>Code Quiz</title>
 </head>
-
 <body>
     <header>
+        <h2 class="scores" href="">View High Scores</h2>
         <h2 class="timer">TIME:<span>60</span></h2>
     </header>
     <section class="welcome">
-        <h1>Coding Quiz Challenge</h1>
-        <p>Try to answer the followig code-related questions within the time limit. Keep in mind that incorrect 
-           will penalize your score time by ten seconds!
-        </p>
-        <button id="start-quiz" type="submit">Start Quiz!</button>
+        <form>
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try to answer the followig code-related questions within the time limit. Keep in mind that incorrect 
+            will penalize your score time by ten seconds!
+            </p>
+            <button type="submit" class="start-quiz" >Start Quiz</button>
+        </form>
     </section>
-
-
-    <section class="all-done" data-state="hidden">
-        <form class="container">
-            <label for="intitals">Please enter your initials</label> 
-            <input type="text" name="">
+    <section id="questions" class="hidden">
+        <h2 id="first-section" class=""></h2>
+        <form id="qs" class="hidden">
+            <label id="q-a-form"></label>"
+            <button class="btn-styleq-a" type="submit" name="question"></button>
+            <button class="btn-styleq-a" type="submit" name="question"></button>
+            <button class="btn-styleq-a" type="submit" name="question"></button>
+            <button class="btn-styleq-a" type="submit" name="question"></button>
         </form>
     </section>
 
+    <section class="all-done" class="hidden">
+        <form class="container">
+            <h1>All Done!</h1>
+            <label for="initials">Please enter your initials</label> 
+            <input type="text" id="name-input">
+            <input type="submit" id="name-btn">
+         </form>
+    </section>
 
-    
+    <section id="highscores" class="hidden">
+        <h1>Highscores</h1>
+        <div>
+            <ol>
+                <span class="user-score">score here</span>
+            </ol>
+        </div>
+        <button id="go-back-btn" class="btn-style1">Go back</button> 
+        <button id="clear-score" class="btn-style1">Clear Highscores</button>
+    </section>
+    <script src="./script.js"></script>
 </body>
 </html>
