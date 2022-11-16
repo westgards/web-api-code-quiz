@@ -14,16 +14,17 @@ To view the project in your browser:
 1. You will need to clone down the repository from GitHub to your local machine. 
 2. Once you have the project locally, you will need to open it in VSCode IDE. Right-click on the `index.html` file, then select `default browser` from the dropdown menu. This will open the HTML page in the broswer of your choice.
 
-![Chrome's dev tools](./src/app/assets/images/.png)
+![Chrome's dev tools](./src/app/assets/images/webapi.png)
 
 ## Deployment
 
 Application is deployed through Github Pages, live URL [Web API: Code Quiz]
 
 ## Features
-- Dynamically updated HTML, CSS, and JavaScript
-- Responsive user interface that adapts to multiple screen sizes
+- Dynamically updated HTML, CSS, and JavaScript.
+- Responsive user interface that adapts to multiple screen sizes.
 - Bootcamp students can test thier knowledge on JavaScript fundamentals.
+- Uses local storage to persist high scores.
 
 ## Credits
 
