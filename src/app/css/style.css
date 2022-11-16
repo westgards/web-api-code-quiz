@@ -45,6 +45,13 @@ p  {
     font-size: 20px;
 }
 
+#qs {
+    font-size: large;
+    flex-direction: column;
+    margin:auto;
+    padding: 10px;
+    border-radius: 12px;
+}
 /* Styling for question buttons */
 #btn-styleq-a {
     background-color: rgb(85, 14, 193);

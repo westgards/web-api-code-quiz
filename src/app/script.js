@@ -1,9 +1,8 @@
 
 var score = 0
 var highScore = 0 // persistent storage
-var initials = " " // form
+var initials = "" // form
 // timer
-
 var timerCount= 60;
 var timerElement = document.querySelector(".timer");
 
@@ -24,7 +23,7 @@ init();
 
 startButton.addEventListener("click", function (event) {
   event.preventDefault();
-  timerCount = 10;
+  timerCount = 60;
   startTimer()
 });
 
@@ -33,7 +32,7 @@ questions.addEventListener("click", function (event) {
   var a = event.target.value;
   console.log(a)
   if (a != null) {
-    validateQuestion(a);
+    validateQ(a);
   }
 });
 // question objects
@@ -41,10 +40,9 @@ var questions = document.querySelector(".questions")
 
 function startTimer() {
     var timeInterval = setInterval(function(){
+    timerElement.textContent = timerCount;
     timerCount--;
-    timerCount.textContent = timerCount;
-    console.log(timerCount)
-    
+    // console.log(timerCount)
     if(timerCount === 0) {
       // Stops execution of action at set interval
       clearInterval(timeInterval);
@@ -52,11 +50,21 @@ function startTimer() {
   }, 1000);
 }
 
+function validateQ() {
+  if(questionAnswers === questionAnswers[a]) {
+    console.log("you got it right!")
+  }else{
+    console.log("wrong!")
+    // minus 10 secs timerCount 
+  }
+}
+
 function init() {
+
 }
 
 function startQuiz() {
-    timerCount = 60;
+    // timerCount = 60;
       // Prevents start button from being clicked when round is in progress
     // startButton.disabled = true;
     startTimer()
