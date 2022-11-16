@@ -18,7 +18,7 @@ To view the project in your browser:
 
 ## Deployment
 
-Application is deployed through Github Pages, live URL [Web API: Code Quiz]
+Application is deployed through Github Pages, live URL [Web API: Code Quiz](https://westgards.github.io/web-api-code-quiz/src/app/)
 
 ## Features
 - Dynamically updated HTML, CSS, and JavaScript.
