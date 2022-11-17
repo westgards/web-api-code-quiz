@@ -8,48 +8,43 @@
     <title>Code Quiz</title>
 </head>
 <body>
-    <header>
-        <h2 class="scores"> 
+    <!-- Highscore hyperlink and Timer -->
+    <section>
+        <h2 class="timer"><span>Time Remaining: 60</span></h2>
         <a href="#highscores">View High Scores</a>
-        <h2 class="timer">TIME:<span>60</span></h2>
-    </header>
-    <section class="welcome">
-        <form>
+    </section>
+    <!-- Quiz Start Page -->
+    <section class="welcome" id="welcome-section">
             <h1>Coding Quiz Challenge</h1>
             <p>Try to answer the followig code-related questions within the time limit. Keep in mind that incorrect 
             will penalize your score time by ten seconds!
             </p>
-            <button type="submit" class="start-quiz" >Start Quiz</button>
-        </form>
+            <button type="submit" class="start-quiz">Start Quiz</button>
     </section>
+    <!-- Display multiple choice questions Page -->
     <section id="questions" class="hidden">
-        <h2 id="first-section"></h2>
-        <form id="qs">
-            <label id="q-a-form"></label>"
-            <button class="btn-styleq-a" type="submit" name="question"></button>
-            <button class="btn-styleq-a" type="submit" name="question"></button>
-            <button class="btn-styleq-a" type="submit" name="question"></button>
-            <button class="btn-styleq-a" type="submit" name="question"></button>
-        </form>
+        <h2 id="question"></h2>
+            <button id="question-btn" class="btn-style-qa" type="submit" name="mulit-ans">
     </section>
-
-    <section class="all-done" class="hidden">
+    <!-- Finished Quiz page-->
+    <section id="all-done" class="hidden">
         <form class="container">
             <h1>All Done!</h1>
+            <!-- Local Storage for Player score and Initials -->
             <label for="initials">Please enter your initials</label> 
             <input type="text" id="name-input">
             <input type="submit" id="name-btn">
-         </form>
+        </form>
     </section>
-
+    <!-- Highscore Display Page -->
     <section id="highscores" class="hidden">
         <h1>Highscores</h1>
         <div>
             <ol>
-                <span class="user-score">score here</span>
+                <h2 class="user-score">score here</h2>
             </ol>
         </div>
-        <button id="go-back-btn" class="btn-style1" >Go back</button> 
+        <button id="go-back-btn" class="btn-style1">Go back</button> 
         <a href="#first-section"></a>
         <button id="clear-score" class="btn-style1">Clear Highscores</button>
     </section>
