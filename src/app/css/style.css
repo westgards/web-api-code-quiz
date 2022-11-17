@@ -1,17 +1,40 @@
 :root {
     --background-color: #f9f6f6;
     --font-color:rgb(8, 8, 8); 
+    --font: "Arial";
 }
+
+
 body {
     display: flex;
     flex-direction: column;
     font-size: 16px;
-    font-family: "Helvetica";
+    font-family: var(--font);
     color: var(--font-color);
     background-color: var(--background-color);
     padding: 0;
   }
 
+/* Hides elements */
+.hidden {
+    display: none;
+}
+
+/* makes elements visible */
+.show {
+    display:flex;
+}
+
+/* Timer class styling */
+.timer {
+    margin-right: auto;
+    text-align: right;
+    flex-direction: column;
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Quiz Start page */
 .welcome {
     text-align: center;
     flex-direction: column;
@@ -21,8 +44,13 @@ body {
     margin: 0;
 }
 
-.start-quiz {
 
+p  {
+    font-size: 20px;
+}
+
+/*  */
+.start-quiz {
     background-color: rgb(85, 14, 193);
     font-size: large;
     color: white;
@@ -33,27 +61,11 @@ body {
 
 }
 
-.timer {
-    margin-right: auto;
-    text-align: right;
-    flex-direction: column;
-    font-size: 20px;
-    margin: 0;
-}
 
-p  {
-    font-size: 20px;
-}
 
-#qs {
-    font-size: large;
-    flex-direction: column;
-    margin:auto;
-    padding: 10px;
-    border-radius: 12px;
-}
+
 /* Styling for question buttons */
-#btn-styleq-a {
+.btn-style-qa {
     background-color: rgb(85, 14, 193);
     font-size: medium;
     color: white;
@@ -61,8 +73,10 @@ p  {
     margin:auto;
     padding: 10px;
     border-radius: 12px;
+
 }
 
+/* Finished Quiz Page */
 .all-done {
     text-align: center;
     flex-direction: column;
@@ -70,4 +84,47 @@ p  {
     font-size: 20px;
     padding: 10px;
     margin: 0;
+}
+
+/* Highscore Page */
+.highscore {
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    font-size: 20px;
+    padding: 10px;
+    margin: 0;
+}
+
+/* form field for name */
+#name-input {
+    font-size: medium;
+}
+
+/* submit button for name */
+#name-btn {
+    background-color: rgb(85, 14, 193);
+    font-size: medium;
+    color: white;
+}
+
+/* Highscore Page */
+#highscores {
+    font-size: large;
+}
+
+/* Local Storage user-score */
+.user-score {
+    font-size: large;
+}
+
+/* Go Back Button, Clear Score Button*/
+.btn-style1 {
+    background-color: rgb(85, 14, 193);
+    font-size: medium;
+    color: white;
+    flex-direction: column;
+    margin:auto;
+    padding: 10px;
+    border-radius: 12px;
 }
