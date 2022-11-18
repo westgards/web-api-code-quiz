@@ -166,11 +166,21 @@ function renderQ() {
  localStorage.setItem("questionAnswers", JSON.stringify(questionAnswers));
  var multiball = JSON.parse(localStorage.getItem("questionsAnswers"));
 
+ listQ.setAttribute("style", "background:#333333; padding:20px;");
+ questions.setAttribute("style", "margin:auto; padding:20px;");
+// Add styling to list items
+ btn1.setAttribute("style", "color:white; background: rgb(85, 14, 193); padding: 5px; border-radius: 12px; margin:auto;");
+ btn2.setAttribute("style", "color:white; background: rgb(85, 14, 193); padding: 5px; border-radius: 12px; margin:auto;");
+ btn3.setAttribute("style", "color:white; background: rgb(85, 14, 193); padding: 5px; border-radius: 12px; margin:auto;");
+ btn4.setAttribute("style", "color:white; background: rgb(85, 14, 193); padding: 5px; border-radius: 12px; margin:auto;");
+
+ questions.textContent = questionAnswers[0].que;
  btn1.textContent = questionAnswers[0].a;
  btn2.textContent = questionAnswers[2].b;
  btn3.textContent = questionAnswers[3].c;
  btn4.textContent = questionAnswers[4].d;
  
+
  body.appendChild(btn1);
  body.appendChild(btn2);
  body.appendChild(btn3);
